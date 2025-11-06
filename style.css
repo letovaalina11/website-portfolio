@@ -1422,7 +1422,7 @@ textarea.form-control {
   background: var(--color-bg-3) url('photo.jpg') no-repeat;
   background-size: cover;
   /* 50px right, 50px up from center */
-  background-position: calc(50% + 50px) calc(50% - 50px);
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
