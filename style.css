@@ -1418,7 +1418,11 @@ textarea.form-control {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: var(--color-bg-3);
+  /* Show the hero photo as a background for reliable panning */
+  background: var(--color-bg-3) url('photo.jpg') no-repeat;
+  background-size: cover;
+  /* 50px right, 50px up from center */
+  background-position: calc(50% + 50px) calc(50% - 50px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1432,15 +1436,9 @@ textarea.form-control {
 }
 
 /* Hero photo styling */
-.hero-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Fill circle and crop overflow */
-  /* Move visual focus: 50px right, 50px up from center */
-  object-position: calc(50% + 50px) calc(50% - 50px);
-  display: block;
-  background: transparent;
-}
+/* No longer using <img>; kept for reference if needed
+.hero-photo { display:none; }
+*/
 
 @media (max-width: 768px) {
   .hero {
